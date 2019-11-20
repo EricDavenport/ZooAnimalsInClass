@@ -42,6 +42,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rPO-G2-ERV" kind="show" id="1TO-Kc-oEl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -168,6 +171,7 @@
                                             <outlet property="classificationLabel" destination="bSQ-ju-hvb" id="sFP-Hg-aY3"/>
                                             <outlet property="nameLabel" destination="OCO-f8-Wer" id="XUd-99-nKk"/>
                                             <outlet property="originLabel" destination="Byx-p8-nnk" id="gBY-k2-Pef"/>
+                                            <segue destination="rPO-G2-ERV" kind="show" id="sRG-wx-Mkd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -255,6 +259,7 @@
                                             <outlet property="classificationLabel" destination="dK7-k7-NSB" id="8S9-VA-TCA"/>
                                             <outlet property="nameLabel" destination="yPe-dR-tUC" id="NtJ-Ox-ZIJ"/>
                                             <outlet property="originLabel" destination="qe8-ud-nGQ" id="5Zm-we-ptX"/>
+                                            <segue destination="rPO-G2-ERV" kind="show" id="2X0-Qc-BXX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftCell" rowHeight="140" id="CV3-xR-Vy0" customClass="AnimalCell" customModule="ZooAnimals" customModuleProvider="target">
@@ -309,6 +314,7 @@
                                             <outlet property="classificationLabel" destination="prR-zg-DHE" id="Eiu-JU-NMU"/>
                                             <outlet property="nameLabel" destination="q3D-Wf-BIi" id="w6N-XR-L91"/>
                                             <outlet property="originLabel" destination="wkm-iH-KCZ" id="Sz0-x5-HO7"/>
+                                            <segue destination="rPO-G2-ERV" kind="show" id="lxB-Pr-NnR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -332,20 +338,68 @@
             </objects>
             <point key="canvasLocation" x="2886.9565217391305" y="944.86607142857133"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal Detail View Controller-->
         <scene sceneID="hh9-f5-ZHk">
             <objects>
-                <viewController id="rPO-G2-ERV" sceneMemberID="viewController">
+                <viewController id="rPO-G2-ERV" customClass="AnimalDetailViewController" customModule="ZooAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRu-6o-uN7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jiS-C9-m6c">
+                                <rect key="frame" x="0.0" y="88" width="414" height="313.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwL-Lh-SnU">
+                                <rect key="frame" x="20" y="409.5" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBc-2v-iCT">
+                                <rect key="frame" x="187" y="409.5" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CtN-PW-gpF">
+                                <rect key="frame" x="20" y="450.5" width="374" height="342.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CtN-PW-gpF" firstAttribute="top" secondItem="kwL-Lh-SnU" secondAttribute="bottom" constant="20" id="6S0-b7-94c"/>
+                            <constraint firstItem="hBc-2v-iCT" firstAttribute="top" secondItem="jiS-C9-m6c" secondAttribute="bottom" constant="8" id="7Py-gy-sNd"/>
+                            <constraint firstItem="CtN-PW-gpF" firstAttribute="leading" secondItem="367-Ai-TSC" secondAttribute="leading" constant="20" id="PXd-Jz-P0Y"/>
+                            <constraint firstItem="jiS-C9-m6c" firstAttribute="trailing" secondItem="367-Ai-TSC" secondAttribute="trailing" id="QTE-mN-RTo"/>
+                            <constraint firstItem="kwL-Lh-SnU" firstAttribute="leading" secondItem="367-Ai-TSC" secondAttribute="leading" constant="20" id="TDk-14-Ziz"/>
+                            <constraint firstItem="367-Ai-TSC" firstAttribute="trailing" secondItem="hBc-2v-iCT" secondAttribute="trailing" constant="20" id="VnA-yI-uXk"/>
+                            <constraint firstItem="jiS-C9-m6c" firstAttribute="leading" secondItem="367-Ai-TSC" secondAttribute="leading" id="X3H-3E-c7R"/>
+                            <constraint firstItem="kwL-Lh-SnU" firstAttribute="width" secondItem="oRu-6o-uN7" secondAttribute="width" multiplier="0.5" id="Xjy-wn-ZfQ"/>
+                            <constraint firstItem="kwL-Lh-SnU" firstAttribute="top" secondItem="jiS-C9-m6c" secondAttribute="bottom" constant="8" id="Zf7-D0-HnP"/>
+                            <constraint firstItem="367-Ai-TSC" firstAttribute="trailing" secondItem="CtN-PW-gpF" secondAttribute="trailing" constant="20" id="eam-Hp-h63"/>
+                            <constraint firstItem="jiS-C9-m6c" firstAttribute="top" secondItem="367-Ai-TSC" secondAttribute="top" id="p8Q-Ga-XFI"/>
+                            <constraint firstItem="hBc-2v-iCT" firstAttribute="width" secondItem="oRu-6o-uN7" secondAttribute="width" multiplier="0.5" id="r2c-rG-BCO"/>
+                            <constraint firstItem="jiS-C9-m6c" firstAttribute="height" secondItem="oRu-6o-uN7" secondAttribute="height" multiplier="0.35" id="tyO-qW-occ"/>
+                            <constraint firstItem="367-Ai-TSC" firstAttribute="bottom" secondItem="CtN-PW-gpF" secondAttribute="bottom" constant="20" id="y5W-7L-THa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="367-Ai-TSC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wFH-IF-C4O"/>
+                    <connections>
+                        <outlet property="animalClassification" destination="hBc-2v-iCT" id="HIE-mg-6oA"/>
+                        <outlet property="animalImageView" destination="jiS-C9-m6c" id="Laz-TD-veQ"/>
+                        <outlet property="animalInfoTextView" destination="CtN-PW-gpF" id="VWa-FC-JXh"/>
+                        <outlet property="animalOriginLabel" destination="kwL-Lh-SnU" id="YvZ-qQ-hLh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbF-GM-VV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4035" y="945"/>
+            <point key="canvasLocation" x="4017" y="183"/>
         </scene>
         <!--Custom Cell-->
         <scene sceneID="ZhC-FC-L7s">
@@ -391,4 +445,7 @@
         <image name="2.circle" catalog="system" width="64" height="60"/>
         <image name="3.circle" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1TO-Kc-oEl"/>
+    </inferredMetricsTieBreakers>
 </document>

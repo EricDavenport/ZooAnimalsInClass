@@ -26,6 +26,16 @@ class BasicAnimalCellController: UIViewController {
     func loadDate() {
         animals = ZooAnimal.zooAnimals
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? AnimalDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("Unable to segue in BasicAnimalViewController")
+        }
+        let animal = animals[indexPath.row]
+        
+        detailVC.animal = animal
+    }
    
     
 }

@@ -14,6 +14,7 @@
 		570BED9D23838AB9002F7F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570BED9B23838AB9002F7F76 /* LaunchScreen.storyboard */; };
 		570BEDA523838AFF002F7F76 /* ZooAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570BEDA423838AFF002F7F76 /* ZooAnimal.swift */; };
 		581CC0DB23846436004DAC38 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC0DA23846436004DAC38 /* AnimalCell.swift */; };
+		582893F323859844007404D1 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582893F223859844007404D1 /* AnimalDetailViewController.swift */; };
 		58739D0023844E2A00D04410 /* BasicAnimalCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58739CFF23844E2A00D04410 /* BasicAnimalCellController.swift */; };
 		58739D0223844E5E00D04410 /* CustomCellVirewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58739D0123844E5E00D04410 /* CustomCellVirewController.swift */; };
 		58739D0423844E7100D04410 /* AnimalSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58739D0323844E7100D04410 /* AnimalSectionsViewController.swift */; };
@@ -29,6 +30,7 @@
 		570BED9E23838AB9002F7F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		570BEDA423838AFF002F7F76 /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimal.swift; sourceTree = "<group>"; };
 		581CC0DA23846436004DAC38 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		582893F223859844007404D1 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		58739CFF23844E2A00D04410 /* BasicAnimalCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimalCellController.swift; sourceTree = "<group>"; };
 		58739D0123844E5E00D04410 /* CustomCellVirewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellVirewController.swift; sourceTree = "<group>"; };
 		58739D0323844E7100D04410 /* AnimalSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSectionsViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				58739D0323844E7100D04410 /* AnimalSectionsViewController.swift */,
+				582893F223859844007404D1 /* AnimalDetailViewController.swift */,
 				58739CFF23844E2A00D04410 /* BasicAnimalCellController.swift */,
 				58739D0123844E5E00D04410 /* CustomCellVirewController.swift */,
 				570BED9023838AB7002F7F76 /* AppDelegate.swift */,
@@ -156,6 +159,7 @@
 				58739D0223844E5E00D04410 /* CustomCellVirewController.swift in Sources */,
 				58739D0023844E2A00D04410 /* BasicAnimalCellController.swift in Sources */,
 				570BED9323838AB7002F7F76 /* SceneDelegate.swift in Sources */,
+				582893F323859844007404D1 /* AnimalDetailViewController.swift in Sources */,
 				581CC0DB23846436004DAC38 /* AnimalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

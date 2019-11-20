@@ -31,6 +31,18 @@ class AnimalSectionsViewController: UIViewController {
         animalClasifications = ZooAnimal.classificationSections()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailsVC = segue.destination as? AnimalDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("Unable to swgue properly")
+        }
+        // get current selected [ZooAnimal]
+        let animal = animalClasifications[indexPath.section][indexPath.row]
+        
+        //set detailVC animal object(proprty)
+        detailsVC.animal = animal
+    }
+    
     
     
 }

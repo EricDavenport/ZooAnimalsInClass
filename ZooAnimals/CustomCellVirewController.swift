@@ -29,6 +29,17 @@ class CustomCellVirewController: UIViewController {
     func loadData() {
         animals = ZooAnimal.zooAnimals
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? AnimalDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("unable to segue properly-check customVC")
+        }
+        
+        let currentAnimal = animals[indexPath.row]
+        
+        detailVC.animal = currentAnimal
+    }
 
 
 }
