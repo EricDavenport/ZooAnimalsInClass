@@ -47,11 +47,25 @@ extension AnimalSectionsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalCell else {
-            fatalError("unable to deuque AnimalsSectionViewCOntroller Cell")
+        // alternate left and rigt image cells based on even or odd modulo remainder
+        
+        var cell: AnimalCell!
+        
+        if indexPath.section % 2 == 0 { // even
+            guard let animalCell = tableView.dequeueReusableCell(withIdentifier: "rightCell", for: indexPath) as? AnimalCell else {
+                fatalError("Couldn't deque rightCell properly")
+            }
+            cell = animalCell
+        } else {  // odd
+            guard let animalCell = tableView.dequeueReusableCell(withIdentifier: "leftCell", for: indexPath) as? AnimalCell else {
+                fatalError("COuldn't deque leftCell properly")
+            }
+            cell = animalCell
         }
+        // get the animal at the  indexPath
         let animal = animalClasifications[indexPath.section][indexPath.row]
         
+        // configure the cell uaing the animal object retireved from above
         cell.configureCell(for: animal)
         
         return cell
